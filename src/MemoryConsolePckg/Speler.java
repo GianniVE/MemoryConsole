@@ -31,4 +31,5 @@ public class Speler {
     public int getGespeeldeBeurten() {
         return gespeeldeBeurten;
     }
+    //tgg
 }
