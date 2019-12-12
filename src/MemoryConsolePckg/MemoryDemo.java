@@ -17,6 +17,7 @@ public class MemoryDemo {
         //Naam van speler weergeven en succes wensen.
         System.out.println("Welkom "+speler1.getNaam()+". Veel succes!");
 
+
         //STAPPEN
         //Spelbord maken in aparte klasse
         //speler laten spelen adhv werken met 1.1 en 1.5
