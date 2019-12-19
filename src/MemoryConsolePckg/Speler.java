@@ -32,4 +32,6 @@ public class Speler {
         return gespeeldeBeurten;
     }
 
+    //Methode maken om de gespeelde beurt +1 te doen of gewoon in main met getter +1 zetten?
+
 }

@@ -1,8 +1,8 @@
 package MemoryConsolePckg;
 
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+
+import static MemoryConsolePckg.Spelbord.cards;
 
 public class MemoryDemo {
     public static void main(String[] args) {
@@ -11,18 +11,18 @@ public class MemoryDemo {
         //Naam vragen van speler en deze aanmaken.
         String naamSpeler;
         System.out.print("Geef de naam van de speler en duw op enter. ");
-        naamSpeler=scanner.nextLine();
+        naamSpeler = scanner.nextLine();
         Speler speler1 = new Speler(naamSpeler);
+        speler1.setGespeeldeBeurten(speler1.getGespeeldeBeurten() + 1);
 
         //Naam van speler weergeven en succes wensen.
-        System.out.println("Welkom "+speler1.getNaam()+". Veel succes!");
+        System.out.println("Welkom " + speler1.getNaam() + ". Veel succes!");
+
+        //spel opstarten
+        Spelbord.setup();
+        //Spelbord.spel(Spelbord.upDown, Spelbord.cards); // calls the game
 
 
-        //STAPPEN
-        //Spelbord maken in aparte klasse
-        //speler laten spelen adhv werken met 1.1 en 1.5
-        //foutmelding of juistmelding
-        //verderspelen
-        //helemaal klaar? score tonen en vragen om op nieuw te spelen.
     }
+
 }
