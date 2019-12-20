@@ -9,11 +9,5 @@ public class MemoryDemo {
         Spel spelStart = new Spel();
         spelStart.StartSpel();
 
-        //aanmaken van een spelbord
-        Spelbord spel1 = new Spelbord();
-        spel1.SpelbordMaken();
-        spel1.getallenToevoegenAanMap();
-        spel1.afdrukkenMap();
-
     }
 }
