@@ -11,13 +11,16 @@ public class Timer {
     public void startTijd(){
         startTijd = LocalDateTime.now();
     }
+
     public void Eindtijd()
     {
         eindTijd = LocalDateTime.now();
     }
+
+    //Methode voor de gespeelde tijd te berekenen
     public void totaleSpeeltijdBerekenen()
     {
         totaleSpeeltijd = Duration.between(eindTijd, startTijd);
-        totaleSpeeltijd.toSeconds();
+        System.out.println(totaleSpeeltijd.toSeconds());
     }
 }

@@ -2,23 +2,26 @@ package MemoryConsolePckg;
 
 import java.util.*;
 
-public  class Spelbord {
+public  class SpelbordNiveau1 {
     Scanner scanner = new Scanner(System.in);
-    Kaart[] getallenArray = new Kaart[16];//16 elementen
+
+    //Aanmaken van de array, list en map
+    Kaart[] getallenArray = new Kaart[20];//20 elementen
     LinkedList<Kaart> getallenLinkedList;
     Map<Integer, Kaart> getallenHashmap;
 
     //Constructor
-    public Spelbord() {
+    public SpelbordNiveau1() {
     }
 
+    //getter van de hashmap
     public Map<Integer, Kaart> getGetallenHashmap() {
         return getallenHashmap;
     }
 
     public  void SpelbordMaken() {
-        //Array opvullen (16 elementen, 2x hetzelfde)
-        for (int i = 0; i < 16; i+=2) {
+        //Array opvullen (20 elementen, 2x hetzelfde)
+        for (int i = 0; i < 20; i+=2) {
             getallenArray[i] = new Kaart();
             getallenArray[i+1] = new Kaart();
             getallenArray[i].setGetal(i);
@@ -30,12 +33,12 @@ public  class Spelbord {
         
         //getallenLinkedList shuffelen
         Collections.shuffle(getallenLinkedList);
-
-        //Aanmaken van de hashmap
-        getallenHashmap= new HashMap<>();
     }
     
     public void getallenToevoegenAanMap() {
+        //Aanmaken van de hashmap
+        getallenHashmap= new HashMap<>();
+
         //getallen van de list toevoegen aan de map
         int y=0;
         for (Kaart kaart : getallenLinkedList) {
@@ -47,7 +50,7 @@ public  class Spelbord {
 
     public void afdrukkenMap(){
         //afdrukken van de Hashmap
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 0; i <= 4; i++) {
             for (int j = 0; j <=3 ; j++) {
                 if(getallenHashmap.get(i * 4 + j).isGematched()){
                     System.out.print("x ");

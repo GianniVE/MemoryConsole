@@ -1,12 +1,11 @@
 package MemoryConsolePckg;
 
-import java.util.*;
-
 public class MemoryDemo {
     public static void main(String[] args) {
 
-        //Spel starten
+        //Aanmaken van een nieuw spel
         Spel spelStart = new Spel();
+        //Spel starten
         spelStart.StartSpel();
 
     }
