@@ -23,6 +23,9 @@ public class Spel {
         //Opvangen van fout bij het kiezen van een niveau
         if(scanner.hasNextInt()) {
             niveau = scanner.nextInt();
+            if (niveau>2){
+                throw new IllegalStateException();
+            }
         }else {
             throw new IllegalArgumentException();
         }

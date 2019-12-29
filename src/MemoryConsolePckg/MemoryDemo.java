@@ -12,6 +12,9 @@ public class MemoryDemo {
         catch (IllegalArgumentException i){
             System.out.println("Gelieve een getal in te voeren.");
         }
+        catch (IllegalStateException s){
+            System.out.println("Je kan enkel kiezen tussen niveau 1 en niveau 2.");
+        }
 
     }
 }

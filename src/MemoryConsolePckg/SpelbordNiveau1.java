@@ -6,7 +6,7 @@ public  class SpelbordNiveau1 {
     Scanner scanner = new Scanner(System.in);
 
     //Aanmaken van de array, list en map
-    Kaart[] getallenArray = new Kaart[20];//20 elementen
+    Kaart[] getallenArray = new Kaart[20];//20 elementen //Hier wordt er een array van kaart elementen aangemaakt.
     LinkedList<Kaart> getallenLinkedList;
     Map<Integer, Kaart> getallenHashmap;
 
@@ -51,17 +51,17 @@ public  class SpelbordNiveau1 {
     public void afdrukkenMap(){
         //afdrukken van de Hashmap
         for (int i = 0; i < 4; i++) {
-            for (int j = 0; j <4 ; j++) {
-                if(getallenHashmap.get(i * 4 + j).isGematched()){
-                    System.out.print("x ");
-                }else{
-                    System.out.print(i*4+j +" ");
+            for (int a = 0; a < 5; a++) {
+                if (getallenHashmap.get(i * 4 + a).isGematched()){
+                    String x="x";
+                    System.out.printf("%-4s",x);
                 }
-                if(j==3){
-                    System.out.println();
-                }
+                else
+                    System.out.printf("%-4d",i*5+a);
             }
+            System.out.println();
         }
+        System.out.println();
     }
 
 
