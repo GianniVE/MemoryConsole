@@ -6,7 +6,7 @@ public  class SpelbordNiveau2 {
     Scanner scanner = new Scanner(System.in);
 
     //Aanmaken van de array, list en map
-    Kaart[] getallenArray = new Kaart[36];//16 elementen
+    Kaart[] getallenArray = new Kaart[36];//36 elementen
     LinkedList<Kaart> getallenLinkedList;
     Map<Integer, Kaart> getallenHashmap;
 

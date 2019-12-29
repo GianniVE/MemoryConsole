@@ -50,8 +50,8 @@ public  class SpelbordNiveau1 {
 
     public void afdrukkenMap(){
         //afdrukken van de Hashmap
-        for (int i = 0; i <= 4; i++) {
-            for (int j = 0; j <=3 ; j++) {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j <4 ; j++) {
                 if(getallenHashmap.get(i * 4 + j).isGematched()){
                     System.out.print("x ");
                 }else{

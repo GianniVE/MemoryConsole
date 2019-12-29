@@ -1,26 +1,26 @@
 package MemoryConsolePckg;
 
 import java.time.Duration;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Timer {
     Duration totaleSpeeltijd;
-    LocalDateTime startTijd;
-    LocalDateTime eindTijd;
+    LocalTime startTijd;
+    LocalTime stopTijd;
 
     public void startTijd(){
-        startTijd = LocalDateTime.now();
+        startTijd = LocalTime.now();
     }
 
-    public void Eindtijd()
+    public void stopTijd()
     {
-        eindTijd = LocalDateTime.now();
+        stopTijd = LocalTime.now();
     }
 
     //Methode voor de gespeelde tijd te berekenen
     public void totaleSpeeltijdBerekenen()
     {
-        totaleSpeeltijd = Duration.between(eindTijd, startTijd);
-        System.out.println(totaleSpeeltijd.toSeconds());
+        totaleSpeeltijd = Duration.between(stopTijd, startTijd);
+        System.out.println("Je hebt "+totaleSpeeltijd.toMinutes()+" minuten gespeeld.");
     }
 }
