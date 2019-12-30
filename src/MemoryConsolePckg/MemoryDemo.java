@@ -2,6 +2,9 @@ package MemoryConsolePckg;
 
 import java.util.Scanner;
 
+//Gianni Versées en Lara Bertels
+//MEMORY CONSOLEVERSIE
+
 public class MemoryDemo {
     public static void main(String[] args) {
         try{
@@ -12,18 +15,17 @@ public class MemoryDemo {
         }
         catch (IllegalStateException s){
             System.out.println("Je kan enkel kiezen tussen niveau 1 en niveau 2.");
-            Spel spel2 = new Spel();
-            spel2.StartSpel();
         }
         catch (IllegalArgumentException i){
             System.out.println("Gelieve een getal in te voeren");
-            Spel spel3 = new Spel();
-            spel3.StartSpel();
         }
         catch (Exception e){
             System.out.println("Je gebruikte dit programma foutief.");
-            Spel spel4 = new Spel();
-            spel4.StartSpel();
+        }
+        finally {
+            System.out.println("Het spel zal worden herstart. Denk er aan om de de juiste waarden in te vullen.");
+            Spel spel2 = new Spel();
+            spel2.StartSpel();
         }
 
     }
