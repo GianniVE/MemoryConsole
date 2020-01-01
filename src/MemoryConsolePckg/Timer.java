@@ -21,6 +21,7 @@ public class Timer {
     public void totaleSpeeltijdBerekenen()
     {
         totaleSpeeltijd = Duration.between(stopTijd, startTijd);
-        System.out.println("Je hebt "+totaleSpeeltijd.toMinutes()+" seconden gespeeld.");
+        System.out.println("Je hebt "+Math.abs(totaleSpeeltijd.toMinutes())+" minuten gespeeld."); //Math.abs voor de absolute waarde van de minuten
+        // anders krijgen we een negatief getal.
     }
 }
