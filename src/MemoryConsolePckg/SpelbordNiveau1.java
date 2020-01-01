@@ -52,7 +52,7 @@ public  class SpelbordNiveau1 {
         //afdrukken van de Hashmap
         for (int i = 0; i < 4; i++) {
             for (int a = 0; a < 5; a++) {
-                if (getallenHashmap.get(i * 4 + a).isGematched()){
+                if (getallenHashmap.get(i * 5 + a).isGematched()){
                     String x="x";
                     System.out.printf("%-4s",x);
                 }
